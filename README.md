@@ -21,23 +21,21 @@ git clone https://github.com/IntelligentSoftwareSystems/GaloisGPU
 
 ## Software pre-requisites
 
-* CUB (v1.3.1)
-
-[https://github.com/NVlabs/cub](https://github.com/NVlabs/cub)
-
-
 * ModernGPU (v1.1)
 
 [https://github.com/NVlabs/moderngpu/releases](https://github.com/NVlabs/moderngpu/releases)
 
-You will need to download CUB and Mgpu.
+ModernGPU can be downloaded as a submodule using `git submodule --init --recursive`.
+
+Else, you may download it manually.  
 Assuming LSGDIR contains the LonestarGPU source (i.e., this repository): 
 
 ```Shell
 cd $LSGDIR/rt/include
-ln -s path-to-cub-x.y/ cub
 ln -s path-to-mgpu-x.y/ mgpu
 ```
+
+CUB is included in recent CUDA releases, and need not be installed separately.
 
 To compile for a specific GPU architecture, make changes to the arch.mk file in the top directory.
 
